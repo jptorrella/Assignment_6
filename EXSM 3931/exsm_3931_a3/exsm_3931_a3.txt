@@ -1,0 +1,45 @@
+// Hungry Customer at the Vending Machine//
+Money/Coins = 10.00
+Vending_Machine_Inventory = {snack_sized_chips = 2.00, candy_packs = 1.50}
+item_code = " "
+change = 0
+
+Browse snack choices and prices associated with them 
+select choice
+Insert Money/Coins 
+While Money/Coins is less than snack cost {
+    keep inserting money until cost is satisfied
+}
+identify code associated with the choice made
+input code on to vending machine keypad 
+If code input is not associated with a snack {
+    error message for customer to input a valid code
+}
+Vending Machinery dispenses the selected item 
+Customer picks up item in the vending machine slot 
+If money inserted is more than snack cost {
+    return change to the change slot for customer to pick up
+}
+Vending_Machine_Inventory updates to reflect change
+
+
+//Vending Machine Owner//
+Stock_Inventory = {snack sized chips = 20 pcs, candy_packs = 20 pcs}
+snack capacity for each snack = 30 pcs
+Coin_Storage_Bag/Safe = 0
+Vending_Machine_Key
+
+Open Vending Machine 
+If Vending Machine is Locked {
+    use Vending_Machine_Key to unlock
+}
+Check Inventory for snack snack_sized_chips and candy_packs
+While snack_sized_chips/candy_pack inventory less than 30pcs {
+    refill stock from Stock_Inventory
+}
+Empty out Vending Machine Coin Storage 
+If there are coins in the storage {
+    transfer coins to the Coin_Storage_Bag/Safe
+}
+After coins storage is empty and stock is refilled, close the vending machine
+Lock Vending Machine Door 
